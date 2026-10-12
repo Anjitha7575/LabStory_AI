@@ -976,7 +976,6 @@ label:focus-within {
 .upload-column{
   max-width: 300px;
   width: 300px;
-  height: 531px;
 }
 
 .create-user-panel {
@@ -1084,7 +1083,7 @@ label:focus-within {
   flex-direction: column;
   align-items: center;
   gap: 9px;
-  padding: 23px 12px;
+  padding: 10px;
   border: 1.5px dashed var(--accent-border);
   border-radius: 12px;
   background: var(--accent-transparent);
@@ -1181,13 +1180,6 @@ label:focus-within {
 .upload-button {
   width: 100%;
   margin-top: 15px;
-}
-
-.upload-footnote {
-  margin-top: 13px;
-  color: var(--muted);
-  font-size: 10px;
-  line-height: 1.6;
 }
 
 .success-message,
@@ -1598,6 +1590,7 @@ label:focus-within {
 
   .workspace {
     padding: 25px 18px;
+    margin-top: 100px;
   }
 
   .workspace-header {
@@ -1794,8 +1787,8 @@ label:focus-within {
 
 .chat-widget {
   position: fixed;
-  right: 26px;
-  bottom: 90px;
+  right: 25px;
+  top: 90px;
   z-index: 999;
   width: min(390px, calc(100vw - 36px));
   display: flex;
@@ -1804,7 +1797,7 @@ label:focus-within {
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 17px;
-  background: var(--surface);
+  background: #2c3857;
   color: var(--text);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
 }
@@ -1831,7 +1824,8 @@ label:focus-within {
 .chat-widget .chat-message p { white-space: pre-wrap; overflow-wrap: anywhere; }
 
 @media (max-width: 480px) {
-  .chat-fab { right: 16px; bottom: 16px; }
+  .chat-fab { right: 16px; bottom: 16px; width: auto;
+        height: 50px;}
   .chat-widget {
     right: 10px;
     bottom: 78px;
@@ -1971,4 +1965,7 @@ label:focus-within {
 
 .home-footer-email button:hover {
   background: rgba(128, 128, 128, 0.15);
+}
+.highlight{
+  color: #f86822;
 }

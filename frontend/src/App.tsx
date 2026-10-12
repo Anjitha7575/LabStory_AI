@@ -855,6 +855,7 @@ export default function App() {
                 <p>
                   Names and IDs are saved in this browser. Uploaded PDFs are sent
                   to the backend under the selected ID.
+                  <span className="highlight"> The user list is stored locally in this browser. This prototype does not provide account authentication.</span>
                 </p>
               </div>
             </div>
@@ -972,6 +973,25 @@ export default function App() {
                   }}
                 />
 
+                <button
+                  className="primary-button upload-button"
+                  onClick={() => void uploadReports()}
+                  disabled={uploading || !selectedUser || files.length === 0}
+                >
+                  {uploading ? (
+                    <><LoaderCircle className="spinner" size={17} /> Uploading...</>
+                  ) : (
+                    <><Upload size={17} /> Upload reports</>
+                  )}
+                </button>
+
+                {uploadMessage && (
+                  <div className="success-message" role="status">
+                    <Check size={17} /> {uploadMessage}
+                  </div>
+                )}
+                {uploadError && <div className="inline-error" role="alert">{uploadError}</div>}
+
                 {files.length > 0 && (
                   <div className="selected-files">
                     <div className="selected-files-heading">
@@ -996,30 +1016,6 @@ export default function App() {
                     ))}
                   </div>
                 )}
-
-                <button
-                  className="primary-button upload-button"
-                  onClick={() => void uploadReports()}
-                  disabled={uploading || !selectedUser || files.length === 0}
-                >
-                  {uploading ? (
-                    <><LoaderCircle className="spinner" size={17} /> Uploading...</>
-                  ) : (
-                    <><Upload size={17} /> Upload reports</>
-                  )}
-                </button>
-
-                {uploadMessage && (
-                  <div className="success-message" role="status">
-                    <Check size={17} /> {uploadMessage}
-                  </div>
-                )}
-                {uploadError && <div className="inline-error" role="alert">{uploadError}</div>}
-
-                <div className="upload-footnote">
-                  The user list is stored locally in this browser. This prototype
-                  does not provide account authentication.
-                </div>
               </section>
 
               <section className="personal-results">
