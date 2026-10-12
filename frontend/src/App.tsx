@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-const API = "http://localhost:8000";
+const API = "https://labstory-api.onrender.com";
 const DEMO_ID = "897987";
 const USERS_KEY = "labstory-users";
 
