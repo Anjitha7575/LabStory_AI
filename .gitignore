@@ -1,0 +1,44 @@
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+build/
+.next/
+coverage/
+
+# Uploaded files and patient data
+uploads/
+uploads_meds/
+*.pdf
+*.csv
+
+# Local system and editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Python virtual environments and generated files
+**/venv/
+**/.venv/
+**/__pycache__/
+
+# Frontend dependencies
+**/node_modules/
+
+# Medical uploads and local data
+backend/uploads_meds/
+backend/uploads/
